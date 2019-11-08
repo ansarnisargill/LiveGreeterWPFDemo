@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LiveGreeterWpfDemo.Views"
         mc:Ignorable="d"
-        Title="RestApiDemo" Height="450" Width="800">
+        Title="Rest Api Demo" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <DataGrid Name="VehiclesGrid"/>
+
     </Grid>
 </Window>

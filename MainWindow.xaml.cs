@@ -1,5 +1,7 @@
 ﻿using LiveGreeterWpfDemo.Models;
 using LiveGreeterWpfDemo.Services;
+using LiveGreeterWpfDemo.Views;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -23,9 +25,20 @@ namespace LiveGreeterWpfDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IHost _host;
+        public MainWindow(IHost host)
         {
+            _host = host;
             InitializeComponent();
+        }
+
+        private void RestApiDemoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var _restApiDemo = _host.Services.GetService(typeof(RestApiDemo)) as RestApiDemo;
+            _restApiDemo.Show();
+            _restApiDemo.Owner = this;
+            _restApiDemo.Show();
         }
     }
 }

@@ -8,7 +8,18 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel Margin="100,10,100,10">
-        <Button Content="Rest Api Demo" HorizontalAlignment="Stretch" Style="{DynamicResource ButtonPrimary}" Margin="10" VerticalAlignment="Top"/>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                <Button Content="Rest Api Demo" Grid.Row="0" Grid.Column="0" Name="RestApiDemoButton" Margin="5"  FontSize="18" Height="60" Click="RestApiDemoButton_Click" HorizontalAlignment="Stretch" Style="{DynamicResource ButtonPrimary}"  VerticalAlignment="Top"/>
+                <Button Content="Report Demo" Grid.Row="0" Grid.Column="1" Name="ReportDemoButton" Margin="5" FontSize="18" Height="60" Click="RestApiDemoButton_Click" HorizontalAlignment="Stretch" Style="{DynamicResource ButtonPrimary}"  VerticalAlignment="Top"/>
+
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

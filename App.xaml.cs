@@ -11,6 +11,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using LiveGreeterWpfDemo.Views;
 
 namespace LiveGreeterWpfDemo
 {
@@ -19,7 +20,7 @@ namespace LiveGreeterWpfDemo
     /// </summary>
     public partial class App : Application
     {
-        private readonly IHost host;
+        public static IHost host;
 
         public App()
         {
@@ -48,6 +49,7 @@ namespace LiveGreeterWpfDemo
             services.AddScoped<IRestApiService, RestApiService>();
 
             services.AddSingleton<MainWindow>();
+            services.AddTransient<RestApiDemo>();
         }
 
         protected override async void OnStartup(StartupEventArgs e)

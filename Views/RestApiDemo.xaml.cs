@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiveGreeterWpfDemo.Services;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,17 @@ namespace LiveGreeterWpfDemo.Views
     /// </summary>
     public partial class RestApiDemo : Window
     {
-        public RestApiDemo()
+        private readonly IRestApiService _service;
+        public RestApiDemo(IRestApiService service)
         {
             InitializeComponent();
+            this._service = service;
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            VehiclesGrid.ItemsSource = this._service.GetVehicles();
         }
     }
 }
