@@ -1,0 +1,35 @@
+﻿<Window x:Class="LiveGreeterWpfDemo.Views.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiveGreeterWpfDemo.Views"
+        mc:Ignorable="d"
+       Title="Snake Game" Height="850" SizeToContent="WidthAndHeight" ResizeMode="NoResize" KeyUp="Window_KeyUp" WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered">
+    <DockPanel>
+
+        <Canvas Name="GameArea" DockPanel.Dock="Top" ClipToBounds="True" Width="800" Height="800">
+
+        </Canvas>
+   
+        <StatusBar DockPanel.Dock="Bottom" Height="30">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                          
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem>
+                <TextBlock Name="lbLScore" Text="Score = 0" FontWeight="Bold" />
+            </StatusBarItem>
+            
+
+
+        </StatusBar>
+
+    </DockPanel>
+</Window>

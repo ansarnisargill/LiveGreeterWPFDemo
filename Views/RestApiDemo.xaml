@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LiveGreeterWpfDemo.Views"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
-        Title="Rest Api Demo" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Rest Api Demo" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <hc:LoadingCircle Name="Loading" Style="{DynamicResource LoadingCircleLarge}" Visibility="Hidden" Panel.ZIndex="3" />
 

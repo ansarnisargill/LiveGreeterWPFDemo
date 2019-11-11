@@ -36,9 +36,15 @@ namespace LiveGreeterWpfDemo
         {
 
             var restApiDemo = _host.Services.GetService(typeof(RestApiDemo)) as RestApiDemo;
-            restApiDemo.Show();
             restApiDemo.Owner = this;
             restApiDemo.Show();
+        }
+
+        private void GameDemoButton_Click(object sender, RoutedEventArgs e)
+        {
+            var gameDemo = _host.Services.GetService(typeof(Game)) as Game;
+            gameDemo.Owner = this;
+            gameDemo.Show();
         }
     }
 }

@@ -9,6 +9,16 @@ namespace LiveGreeterWpfDemo.Models
 
     public class Vehicle : INotifyPropertyChanged
     {
+
+        public int VehicleID { get; set; }
+
+        public string RegNo { get; set; }
+
+
+        public string Make { get; set; }
+
+        public string Model { get; set; }
+
         private string color;
         public string Color
         {
@@ -29,15 +39,6 @@ namespace LiveGreeterWpfDemo.Models
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
-        public int VehicleID { get; set; }
-
-        public string RegNo { get; set; }
-
-
-        public string Make { get; set; }
-
-        public string Model { get; set; }
-
         public string EngineNo { get; set; }
 
         public string ChasisNo { get; set; }

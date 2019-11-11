@@ -50,6 +50,7 @@ namespace LiveGreeterWpfDemo
 
             services.AddSingleton<MainWindow>();
             services.AddTransient<RestApiDemo>();
+            services.AddTransient<Game>();
         }
 
         protected override async void OnStartup(StartupEventArgs e)

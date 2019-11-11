@@ -69,3 +69,5 @@ C:\Users\it\Desktop\LiveGreeterWPFDemo\obj\Debug\netcoreapp3.0\LiveGreeterWpfDem
 C:\Users\it\Desktop\LiveGreeterWPFDemo\obj\Debug\netcoreapp3.0\LiveGreeterWpfDemo.pdb
 C:\Users\it\Desktop\LiveGreeterWPFDemo\obj\Debug\netcoreapp3.0\LiveGreeterWpfDemo.csprojAssemblyReference.cache
 C:\Users\it\Desktop\LiveGreeterWPFDemo\obj\Debug\netcoreapp3.0\LiveGreeterWpfDemo_Content.g.cs
+C:\Users\it\Desktop\LiveGreeterWPFDemo\obj\Debug\netcoreapp3.0\Views\Game.g.cs
+C:\Users\it\Desktop\LiveGreeterWPFDemo\obj\Debug\netcoreapp3.0\Views\Game.baml
