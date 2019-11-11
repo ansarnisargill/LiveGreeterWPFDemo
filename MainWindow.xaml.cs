@@ -46,5 +46,12 @@ namespace LiveGreeterWpfDemo
             gameDemo.Owner = this;
             gameDemo.Show();
         }
+
+        private void FlowDocumentButton_Click(object sender, RoutedEventArgs e)
+        {
+            var obj = _host.Services.GetService(typeof(LiveGreeterWpfDemo.Views.FlowDocument)) as LiveGreeterWpfDemo.Views.FlowDocument;
+            obj.Owner = this;
+            obj.Show();
+        }
     }
 }

@@ -20,6 +20,18 @@
                 <Button Content="Game Demo" Grid.Row="0" Grid.Column="1" Name="GameDemoButton" Margin="5" FontSize="18" Height="60" Click="GameDemoButton_Click" HorizontalAlignment="Stretch" Style="{DynamicResource ButtonPrimary}"  VerticalAlignment="Top"/>
 
             </Grid>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                <Button Content="FlowDocument Demo" Grid.Row="0" Grid.Column="0" Name="FlowDocumentButton" Margin="5"  FontSize="18" Height="60" Click="FlowDocumentButton_Click" HorizontalAlignment="Stretch" Style="{DynamicResource ButtonPrimary}"  VerticalAlignment="Top"/>
+               
+
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

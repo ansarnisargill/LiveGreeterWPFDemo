@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0
 C:\Users\it\Desktop\LiveGreeterWPFDemo\App.xaml
-3748419579
+51513108537
 1-301770927
-10-1687266627
+122042573277
 228-1912529216
-MainWindow.xaml;Views\Game.xaml;Views\RestApiDemo.xaml;
+MainWindow.xaml;Views\DataGridDemo.xaml;Views\FlowDocument.xaml;Views\Game.xaml;Views\RestApiDemo.xaml;
 
-False
+True
 

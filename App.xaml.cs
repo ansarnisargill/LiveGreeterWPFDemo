@@ -24,20 +24,17 @@ namespace LiveGreeterWpfDemo
 
         public App()
         {
-            host = Host.CreateDefaultBuilder()  // Use default settings
-                                                //new HostBuilder()          // Initialize an empty HostBuilder
+            host = Host.CreateDefaultBuilder()  
+                                                
                     .ConfigureAppConfiguration((context, builder) =>
                     {
-                        // Add other configuration files...
+                        
                         builder.AddJsonFile("appsettings.local.json", optional: true);
                     }).ConfigureServices((context, services) =>
                     {
                         ConfigureServices(context.Configuration, services);
                     })
-                    .ConfigureLogging(logging =>
-                    {
-                        // Add other loggers...
-                    })
+                    .ConfigureLogging(logging =>{})
                     .Build();
         }
 
@@ -51,6 +48,8 @@ namespace LiveGreeterWpfDemo
             services.AddSingleton<MainWindow>();
             services.AddTransient<RestApiDemo>();
             services.AddTransient<Game>();
+            services.AddTransient<FlowDocument>();
+
         }
 
         protected override async void OnStartup(StartupEventArgs e)
