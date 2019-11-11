@@ -35,10 +35,10 @@ namespace LiveGreeterWpfDemo
         private void RestApiDemoButton_Click(object sender, RoutedEventArgs e)
         {
 
-            var _restApiDemo = _host.Services.GetService(typeof(RestApiDemo)) as RestApiDemo;
-            _restApiDemo.Show();
-            _restApiDemo.Owner = this;
-            _restApiDemo.Show();
+            var restApiDemo = _host.Services.GetService(typeof(RestApiDemo)) as RestApiDemo;
+            restApiDemo.Show();
+            restApiDemo.Owner = this;
+            restApiDemo.Show();
         }
     }
 }

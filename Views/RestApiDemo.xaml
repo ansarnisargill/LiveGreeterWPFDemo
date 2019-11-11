@@ -4,10 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LiveGreeterWpfDemo.Views"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
         Title="Rest Api Demo" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid Name="VehiclesGrid"/>
+        <hc:LoadingCircle Name="Loading" Style="{DynamicResource LoadingCircleLarge}" Visibility="Hidden" Panel.ZIndex="3" />
+
+        <DataGrid Name="VehiclesGrid"  CanUserDeleteRows="True" Margin="10,100,10,10"/>
+        <TextBox HorizontalAlignment="Left" Name="TBRegNo" Margin="28,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,17,0,0" Text="Reg No" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="TBMake" Margin="165,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="197,17,0,0" Text="Make" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="TBModel" Margin="302,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="334,17,0,0" Text="Model" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="TBColor" Margin="442,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="473,16,0,0" Text="Color" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Add" Style="{DynamicResource ButtonPrimary}" Name="BTNAdd" Click="BTNAdd_Click" HorizontalAlignment="Left" Margin="616,38,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
