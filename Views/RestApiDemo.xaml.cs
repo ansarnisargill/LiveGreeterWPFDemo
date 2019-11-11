@@ -80,7 +80,7 @@ namespace LiveGreeterWpfDemo.Views
 
         private async void BTNAdd_Click(object sender, RoutedEventArgs e)
         {
-            var vehicle = new Vehicle()
+            var vehicle = new Vehicle(_service)
             {
                 Active = true,
                 Color = TBColor.Text,

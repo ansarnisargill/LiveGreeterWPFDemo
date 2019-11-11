@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiveGreeterWpfDemo.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -9,6 +10,7 @@ namespace LiveGreeterWpfDemo.Models
 
     public class Vehicle : INotifyPropertyChanged
     {
+        private readonly IRestApiService _restApiService;
 
         public int VehicleID { get; set; }
 
@@ -37,12 +39,18 @@ namespace LiveGreeterWpfDemo.Models
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
+            {
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            }
         }
         public string EngineNo { get; set; }
 
         public string ChasisNo { get; set; }
         public DateTime DateOfPurchase { get; set; }
         public bool Active { get; set; }
+        public Vehicle(IRestApiService restApiService)
+        {
+            _restApiService = restApiService;
+        }
     }
 }

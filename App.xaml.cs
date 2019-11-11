@@ -12,6 +12,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using LiveGreeterWpfDemo.Views;
+using HandyControl.Controls;
+
 
 namespace LiveGreeterWpfDemo
 {
@@ -71,6 +73,11 @@ namespace LiveGreeterWpfDemo
             }
 
             base.OnExit(e);
+        }
+
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            HandyControl.Controls.MessageBox.Fatal(e.Exception.Message, "Exception Occured");
         }
     }
 }

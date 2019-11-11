@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace LiveGreeterWpfDemo.Services
 {
@@ -41,7 +42,7 @@ namespace LiveGreeterWpfDemo.Services
             var client = new RestClient(_settings.Value.API);
 
             var request = new RestRequest("", Method.POST);
-            request.RequestFormat = DataFormat.Json;
+            request.RequestFormat = RestSharp.DataFormat.Json;
             request.AddJsonBody(vehicle);
             IRestResponse response = client.Execute(request);
             var content = response.Content;
@@ -57,7 +58,7 @@ namespace LiveGreeterWpfDemo.Services
             var client = new RestClient(_settings.Value.API);
 
             var request = new RestRequest("", Method.PUT);
-            request.RequestFormat = DataFormat.Json;
+            request.RequestFormat = RestSharp.DataFormat.Json;
             request.AddJsonBody(vehicle);
             IRestResponse response = client.Execute(request);
             var content = response.Content;
@@ -65,6 +66,7 @@ namespace LiveGreeterWpfDemo.Services
             {
                 result = true;
             }
+            MessageBox.Show("row updated");
             return result;
         }
         public bool DeleteVehicle(int vehicleId)
