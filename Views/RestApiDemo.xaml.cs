@@ -18,6 +18,7 @@ using System.Collections.Specialized;
 using HandyControl.Data;
 using HandyControl.Tools;
 using HandyControl.Controls;
+using System.Linq;
 
 namespace LiveGreeterWpfDemo.Views
 {
@@ -52,7 +53,7 @@ namespace LiveGreeterWpfDemo.Views
                         Loading.Visibility = Visibility.Hidden;
                     }
                 }
-             
+
             }
         }
 
@@ -63,6 +64,7 @@ namespace LiveGreeterWpfDemo.Views
             await LoadData();
             Loading.Visibility = Visibility.Hidden;
             this.HasDataLoaded = true;
+            Flags.HasLoaded = true;
         }
         private async Task LoadData()
         {
@@ -71,16 +73,21 @@ namespace LiveGreeterWpfDemo.Views
                   this._service.GetVehicles()
             );
             this.List.Clear();
-            foreach(var item in list)
+            foreach (var item in list)
             {
-                this.List.Add(item);
+                if (!this.List.Any(x => x.VehicleID == item.VehicleID))
+                {
+                    Flags.HasLoaded = false;
+                    this.List.Add(item);
+                    Flags.HasLoaded = true;
+                }
             }
-            
+
         }
 
         private async void BTNAdd_Click(object sender, RoutedEventArgs e)
         {
-            var vehicle = new Vehicle(_service)
+            var vehicle = new Vehicle()
             {
                 Active = true,
                 Color = TBColor.Text,
@@ -96,7 +103,7 @@ namespace LiveGreeterWpfDemo.Views
         }
         private async Task PostData(Vehicle vehicle)
         {
-            var res = await Task.Run(() =>this._service.PostVehicle(vehicle));
+            var res = await Task.Run(() => this._service.PostVehicle(vehicle));
 
         }
         private async Task DeleteData(Vehicle vehicle)
@@ -105,13 +112,28 @@ namespace LiveGreeterWpfDemo.Views
             if (res)
             {
                 HandyControl.Controls.MessageBox.Info("Vehicle Deletd");
-              
+
             }
             else
             {
                 HandyControl.Controls.MessageBox.Error("Vehicle Can Not Be Deletd");
 
             }
+
+        }
+        private async void BTNSync_Click(object sender, RoutedEventArgs e)
+        {
+            Loading.Visibility = Visibility.Visible;
+            foreach (var item in this.List)
+            {
+                if (item.IsDirty)
+                {
+                 var res = await Task.Run(() => this._service.UpdateVehicle(item));
+
+                }
+            }
+            await LoadData();
+            Loading.Visibility = Visibility.Hidden;
 
         }
     }

@@ -1,32 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\it\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj": {}
+    "C:\\Users\\Ansar\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\it\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj": {
+    "C:\\Users\\Ansar\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\it\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj",
+        "projectUniqueName": "C:\\Users\\Ansar\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj",
         "projectName": "LiveGreeterWpfDemo",
-        "projectPath": "C:\\Users\\it\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj",
-        "packagesPath": "C:\\Users\\it\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\it\\Desktop\\LiveGreeterWPFDemo\\obj\\",
+        "projectPath": "C:\\Users\\Ansar\\Desktop\\LiveGreeterWPFDemo\\LiveGreeterWpfDemo.csproj",
+        "packagesPath": "C:\\Users\\Ansar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ansar\\Desktop\\LiveGreeterWPFDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\it\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Ansar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

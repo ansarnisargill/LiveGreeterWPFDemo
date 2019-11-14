@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LiveGreeterWpfDemo.Views"
         mc:Ignorable="d"
-       Title="Snake Game" Height="850" SizeToContent="WidthAndHeight" ResizeMode="NoResize" KeyUp="Window_KeyUp" WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered">
+       Title="Snake Game" Height="650" SizeToContent="WidthAndHeight" ResizeMode="NoResize" KeyUp="Window_KeyUp" WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered" 
+        Closing="Window_Closing"  >
     <DockPanel>
 
-        <Canvas Name="GameArea" DockPanel.Dock="Top" ClipToBounds="True" Width="800" Height="800">
+        <Canvas Name="GameArea" DockPanel.Dock="Top" ClipToBounds="True" Width="600" Height="600">
 
         </Canvas>
    

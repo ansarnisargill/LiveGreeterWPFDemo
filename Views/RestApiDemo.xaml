@@ -10,7 +10,16 @@
     <Grid>
         <hc:LoadingCircle Name="Loading" Style="{DynamicResource LoadingCircleLarge}" Visibility="Hidden" Panel.ZIndex="3" />
 
-        <DataGrid Name="VehiclesGrid"  CanUserDeleteRows="True" Margin="10,100,10,10"/>
+        <DataGrid Name="VehiclesGrid" AutoGenerateColumns="False" CanUserDeleteRows="True" Margin="10,100,10,10">
+        <DataGrid.Columns>
+
+				<DataGridTextColumn Header="Reg No" Binding="{Binding RegNo}" />
+
+				<DataGridTextColumn Header="Model" Binding="{Binding Model}" />
+				<DataGridTextColumn Header="Make" Binding="{Binding Make}" />
+				<DataGridTextColumn Header="Color" Binding="{Binding Color}" />
+			</DataGrid.Columns>
+            </DataGrid>
         <TextBox HorizontalAlignment="Left" Name="TBRegNo" Margin="28,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,17,0,0" Text="Reg No" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Name="TBMake" Margin="165,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -20,6 +29,6 @@
         <TextBox HorizontalAlignment="Left" Name="TBColor" Margin="442,38,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="473,16,0,0" Text="Color" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Add" Style="{DynamicResource ButtonPrimary}" Name="BTNAdd" Click="BTNAdd_Click" HorizontalAlignment="Left" Margin="616,38,0,0" VerticalAlignment="Top"/>
-
+<Button Content="Sync" Style="{DynamicResource ButtonPrimary}" Name="BTNSync" Click="BTNSync_Click" HorizontalAlignment="Left" Margin="666,38,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

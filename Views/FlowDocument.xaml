@@ -10,76 +10,36 @@
         <FlowDocumentReader>
             <FlowDocument>
                 <Paragraph>
-                    <Image Source="http://www.wpf-tutorial.com/images/logo.png" Width="90" Height="90" Margin="0,0,30,0" />
-                    <Run FontSize="120">WPF</Run>
+                    <Image Source="https://ansarnisargill.web.app/assets/an.png" HorizontalAlignment="Stretch" Height="390" Margin="0,0,30,0" />
+                    <Run FontSize="70">Ansar Nisar</Run>
                 </Paragraph>
 
                 <Paragraph>
-                    WPF, which stands for
-                    <Bold>Windows Presentation Foundation</Bold> ,
-                    is Microsoft's latest approach to a GUI framework, used with the .NET framework.
-                    Some advantages include:
+                    Hi! I am .Net Developer Who is well versed in everything .net relaed. I have special experience in
+                    <Bold>Windows Presentation Foundation</Bold> 
+                    I work in following technologies:
                 </Paragraph>
 
                 <List>
                     <ListItem>
                         <Paragraph>
-                            It's newer and thereby more in tune with current standards
+                            WPF
                         </Paragraph>
                     </ListItem>
                     <ListItem>
                         <Paragraph>
-                            Microsoft is using it for a lot of new applications, e.g. Visual Studio
+                            Node js
                         </Paragraph>
                     </ListItem>
                     <ListItem>
                         <Paragraph>
-                            It's more flexible, so you can do more things without having to write or buy new controls
+                            ASP.NET Core
                         </Paragraph>
                     </ListItem>
                 </List>
 
-                <Table CellSpacing="0">
-                    <TableRowGroup>
-                        <TableRow Background="Gainsboro" FontWeight="Bold">
-                            <TableCell></TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right">WinForms</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right">WPF</Paragraph>
-                            </TableCell>
-                        </TableRow>
-                    </TableRowGroup>
-
-                    <TableRowGroup>
-                        <TableRow>
-                            <TableCell Background="Gainsboro" FontWeight="Bold">
-                                <Paragraph>Lines of code</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right">1.718.000</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right">1.542.000</Paragraph>
-                            </TableCell>
-                        </TableRow>
-                    </TableRowGroup>
-                    <TableRowGroup>
-                        <TableRow>
-                            <TableCell Background="Gainsboro" FontWeight="Bold">
-                                <Paragraph>Developers</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right">633.000</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph TextAlignment="Right">981.000</Paragraph>
-                            </TableCell>
-                        </TableRow>
-                    </TableRowGroup>
-                </Table>
-                <Paragraph Foreground="Silver" FontStyle="Italic">A table of made up WinForms/WPF numbers</Paragraph>
+                
+                <Paragraph Foreground="Silver" FontStyle="Italic">Just to show flow document</Paragraph>
             </FlowDocument>
         </FlowDocumentReader>
     </Grid>

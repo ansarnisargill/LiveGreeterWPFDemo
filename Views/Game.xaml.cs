@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace LiveGreeterWpfDemo.Views
 {
@@ -21,7 +22,7 @@ namespace LiveGreeterWpfDemo.Views
         private System.Windows.Threading.DispatcherTimer gameTickTimer = new System.Windows.Threading.DispatcherTimer();
         const int SnakeSquareSize = 20;
         const int SnakeStartLength = 3;
-        const int SnakeStartSpeed = 200;
+        const int SnakeStartSpeed = 400;
         private int currentScore = 0;
         private Random rnd = new Random();
         private SolidColorBrush snakeBodyBrush = Brushes.Green;
@@ -275,6 +276,11 @@ namespace LiveGreeterWpfDemo.Views
         {
             gameTickTimer.IsEnabled = false;
             HandyControl.Controls.MessageBox.Fatal("You did Well! Press Enter to start again.", "Snake Game");
+        }
+        void Window_Closing(object sender, CancelEventArgs e)
+        {
+
+            this.gameTickTimer.IsEnabled=false;
         }
     }
     public class SnakePart

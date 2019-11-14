@@ -10,8 +10,6 @@ namespace LiveGreeterWpfDemo.Models
 
     public class Vehicle : INotifyPropertyChanged
     {
-        private readonly IRestApiService _restApiService;
-
         public int VehicleID { get; set; }
 
         public string RegNo { get; set; }
@@ -38,8 +36,13 @@ namespace LiveGreeterWpfDemo.Models
 
         public void NotifyPropertyChanged(string propName)
         {
+
             if (this.PropertyChanged != null)
             {
+                if (Flags.HasLoaded)
+                {
+                    this.IsDirty = true;
+                }
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
@@ -48,9 +51,6 @@ namespace LiveGreeterWpfDemo.Models
         public string ChasisNo { get; set; }
         public DateTime DateOfPurchase { get; set; }
         public bool Active { get; set; }
-        public Vehicle(IRestApiService restApiService)
-        {
-            _restApiService = restApiService;
-        }
+        public bool IsDirty { get; set; } = false;
     }
 }
